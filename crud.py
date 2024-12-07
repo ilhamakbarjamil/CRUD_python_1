@@ -12,6 +12,8 @@ def menu():
             create()
         elif menu == "2":
             read()
+        elif menu == "3":
+            update()
 
 def create():
     print("Menu daftar akun")
@@ -32,14 +34,18 @@ def read():
     print("\ndata yang sudah terdftar\n")
     for i,data in enumerate(data_pengguna, start=1):
         print(f"{i}. Email: {data['email']}, Password: {data['pass']}")
-        
-
 
 def update():
     print("Menu update data")
+    email = input("Masukkan email : ")
 
-
-
-
+    for data in data_pengguna:
+        if data['email'] == email:
+            new_pass = input("masukkan password baru: ")
+            data['pass'] == new_pass
+            print("data berhasil di perbarui")
+            return
+    
+    print("email tidak ditemukan")
 
 menu()
