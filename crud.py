@@ -22,20 +22,22 @@ def create():
             print("harus mengandung @gmail.com")
         else:
             password = input("Masukkan password: ")
+            print("data berhasil di simpan")
             break
 
     di_simpan = {"email": email, "pass": password}
     data_pengguna.append(di_simpan)
 
 def read():
-    print("data yang sudah masuk\n")
-    for data in data_pengguna:
-        print(f"Email: {data['email']}\nPassword: {data['pass']}")
-        break
+    print("\ndata yang sudah terdftar\n")
+    for i,data in enumerate(data_pengguna, start=1):
+        print(f"{i}. Email: {data['email']}, Password: {data['pass']}")
+        
+
 
 def update():
     print("Menu update data")
-    
+
 
 
 
